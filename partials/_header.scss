@@ -1,0 +1,129 @@
+header {
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+a {
+    color: $white-normal;
+}
+
+/*HEADER DESKTOP*/
+
+.header-menu {
+    display: flex;
+    gap: 40px;
+}
+
+.header-menu a:hover {
+    color: $brown-dark;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 14px;
+}
+
+.img-logo {
+    width: 30%;
+}
+
+/*HEADER MOBILE*/
+.nav-button {
+    border: 0;
+    border-radius: 4px;
+    padding: 8px;
+    color: $brown-dark;
+    background-color: $brown-light;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.nav-button i {
+    color: $brown-dark;
+}
+
+.overlay {
+    width: 0;
+    height: 100%;
+    background-color: $brown-light;
+    z-index: 9;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    color: $brown-normal;
+    display: block;
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: $brown-dark;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 45px;
+    font-size: 60px;
+}
+
+/*Responsividade*/
+
+@media screen and (max-width: 768px) {
+
+    .header-desktop {
+        display: none;
+    }
+
+    .header-mobile {
+        width: 100%;
+        position: absolute;
+    }
+
+    .nav-button {
+        position: relative;
+        left: 15px;
+        top: 15px;
+    }
+
+    .log-mob {
+        width: 20%;
+        position: relative;
+        left: 40%;
+    }
+
+    .overlay-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media(min-width: 769px) {
+    .header-mobile {
+        display: none;
+    }
+}
